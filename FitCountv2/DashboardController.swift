@@ -32,9 +32,7 @@ class DashboardController: UIViewController, NewFitCountData {
         let newURL = "https://fitcountbe.herokuapp.com/" + userName
         Alamofire.request(newURL, method: .get).responseJSON {
             response in
-            if response.result.isSuccess {
-                print("success, user data received")
-                
+            if response.result.isSuccess {                
                 self.userData = JSON(response.result.value!)
                 
                 self.fitCountLabel.text = String(describing: self.userData["totalFitCount"])
@@ -59,6 +57,9 @@ class DashboardController: UIViewController, NewFitCountData {
             
             workoutVC.userName = userName
             workoutVC.userFitCount = String(describing: userData["totalFitCount"])
+            workoutVC.userGymLat = Double(String(describing: userData["gymLat"]))!
+            workoutVC.userGymLon = Double(String(describing: userData["gymLon"]))!
+            workoutVC.userGymName = userData["gymName"].string!
             workoutVC.delegate = self
         }
     }

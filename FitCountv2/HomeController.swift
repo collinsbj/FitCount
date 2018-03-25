@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
@@ -21,10 +21,30 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         incorrectInfoLabel.isHidden = true
+        userNameTextField.delegate = self
+        passWordTextField.delegate = self
+        userNameTextField.returnKeyType = UIReturnKeyType.next
+        passWordTextField.returnKeyType = UIReturnKeyType.send
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            
+            nextField.becomeFirstResponder()
+            
+        } else {
+            
+            textField.resignFirstResponder()
+            signIn()
+            
+            return true;
+            
+        }
+        return false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,8 +53,8 @@ class ViewController: UIViewController {
             dashboardVC.userName = String(describing: self.userData["userName"])
         }
     }
-
-    @IBAction func signInButtonPressed(_ sender: UIButton) {
+    
+    func signIn() {
         let newURL = "https://fitcountbe.herokuapp.com/" + userNameTextField.text!
         Alamofire.request(newURL, method: .get).responseJSON {
             response in
@@ -50,6 +70,10 @@ class ViewController: UIViewController {
                 self.incorrectInfoLabel.isHidden = false
             }
         }
+    }
+
+    @IBAction func signInButtonPressed(_ sender: UIButton) {
+        signIn()
     }
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
