@@ -1,15 +1,20 @@
 PODS:
   - Alamofire (4.7.0)
+  - MMWormhole (2.0.0):
+    - MMWormhole/Core (= 2.0.0)
+  - MMWormhole/Core (2.0.0)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - MMWormhole
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  MMWormhole: 0cd3fd35a9118b2e2d762b499f54eeaace0be791
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 46c1b84d1468155984bc2d030f497fc19edab7f6
+PODFILE CHECKSUM: 49eafef8386a445fe859d336a397b430b9b0d77b
 
 COCOAPODS: 1.4.0

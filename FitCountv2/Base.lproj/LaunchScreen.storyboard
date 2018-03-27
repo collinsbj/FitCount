@@ -18,12 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="body-brawny-crossfit-931323" translatesAutoresizingMaskIntoConstraints="NO" id="3kq-8L-cdo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BJ-FITCOUNT" translatesAutoresizingMaskIntoConstraints="NO" id="a5a-EQ-tOu">
                                 <rect key="frame" x="32" y="237" width="311" height="339"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3kq-8L-cdo" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Az9-69-vKo"/>
+                            <constraint firstItem="3kq-8L-cdo" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="QK2-uc-jjg"/>
+                            <constraint firstAttribute="trailing" secondItem="3kq-8L-cdo" secondAttribute="trailing" id="n3f-g1-OBN"/>
+                            <constraint firstAttribute="bottom" secondItem="3kq-8L-cdo" secondAttribute="bottom" id="nYE-hK-0b1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -34,5 +42,6 @@
     </scenes>
     <resources>
         <image name="BJ-FITCOUNT" width="600" height="600"/>
+        <image name="body-brawny-crossfit-931323" width="3456" height="5184"/>
     </resources>
 </document>

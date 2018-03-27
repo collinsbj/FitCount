@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 import Alamofire
 import SwiftyJSON
+import WatchConnectivity
 
 protocol NewFitCountData {
     func setNewFitCountData(data: String)
@@ -30,8 +31,7 @@ final class UserGymAnnotation: NSObject, MKAnnotation {
     }
 }
 
-class WorkoutController: UIViewController, CLLocationManagerDelegate {
-    
+class WorkoutController: UIViewController, CLLocationManagerDelegate, WCSessionDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var currentFitCountLabel: UILabel!
@@ -40,6 +40,7 @@ class WorkoutController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var finishWorkoutButton: UIButton!
     @IBOutlet weak var tooFarFromGymWarning: UILabel!
     
+    var session: WCSession!
     var delegate: NewFitCountData?
     var currentPoints  = 0
     var userName: String = ""
@@ -53,6 +54,7 @@ class WorkoutController: UIViewController, CLLocationManagerDelegate {
             if heartRate >= 100 {
                 currentPoints += 1
                 fitCountNumberLabel.text = String(currentPoints)
+                sendDataToWatch()
             }
         }
     }
@@ -85,6 +87,12 @@ class WorkoutController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
+        }
+        
+        if WCSession.isSupported() {
+            self.session = WCSession.default
+            self.session.delegate = self
+            self.session.activate()
         }
         
     }
@@ -127,10 +135,14 @@ class WorkoutController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+    func sendDataToWatch() {
+        session.sendMessage(["points" : currentPoints], replyHandler: nil, errorHandler: nil)
+    }
+    
     
     @IBAction func startWorkoutButton(_ sender: UIButton) {
         
-        if Int(distanceFromGym!) < 1 {
+        if Int(distanceFromGym!) < 15 {
         mapView.isHidden = true
         startWorkoutButton.isHidden = true
         currentFitCountLabel.isHidden = false
@@ -148,6 +160,15 @@ class WorkoutController: UIViewController, CLLocationManagerDelegate {
         sendData()
         delegate?.setNewFitCountData(data: newPoints )
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
     }
     
 }

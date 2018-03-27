@@ -95,4 +95,9 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         signUp()
     }
     
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }

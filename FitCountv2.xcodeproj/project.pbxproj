@@ -20,7 +20,57 @@
 		F1B5C05820658DA500E388BF /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B5C05720658DA500E388BF /* DashboardController.swift */; };
 		F1B5C05E2065914100E388BF /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B5C05D2065914100E388BF /* HistoryController.swift */; };
 		F1B5C0602065926100E388BF /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B5C05F2065926000E388BF /* WorkoutController.swift */; };
+		F1D293BA206981F80060E8AD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D293B8206981F80060E8AD /* Interface.storyboard */; };
+		F1D293BC206981F80060E8AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1D293BB206981F80060E8AD /* Assets.xcassets */; };
+		F1D293C3206981F90060E8AD /* FitCount WatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F1D293C2206981F90060E8AD /* FitCount WatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F1D293C8206981F90060E8AD /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D293C7206981F90060E8AD /* InterfaceController.swift */; };
+		F1D293CA206981F90060E8AD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D293C9206981F90060E8AD /* ExtensionDelegate.swift */; };
+		F1D293CC206981F90060E8AD /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D293CB206981F90060E8AD /* ComplicationController.swift */; };
+		F1D293CE206981F90060E8AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1D293CD206981F90060E8AD /* Assets.xcassets */; };
+		F1D293D2206981FA0060E8AD /* FitCount WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F1D293B6206981F80060E8AD /* FitCount WatchApp.app */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F1D293C4206981F90060E8AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1B5C02F2065765D00E388BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1D293C1206981F90060E8AD;
+			remoteInfo = "FitCount WatchApp Extension";
+		};
+		F1D293D0206981FA0060E8AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1B5C02F2065765D00E388BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1D293B5206981F80060E8AD;
+			remoteInfo = "FitCount WatchApp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F1D293D8206981FA0060E8AD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F1D293C3206981F90060E8AD /* FitCount WatchApp Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1D293DA206981FA0060E8AD /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F1D293D2206981FA0060E8AD /* FitCount WatchApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		183337D9FD8F471DC57FB0D0 /* Pods-FitCountv2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitCountv2.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitCountv2/Pods-FitCountv2.release.xcconfig"; sourceTree = "<group>"; };
@@ -41,9 +91,26 @@
 		F1B5C05720658DA500E388BF /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
 		F1B5C05D2065914100E388BF /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		F1B5C05F2065926000E388BF /* WorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
+		F1D293B6206981F80060E8AD /* FitCount WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FitCount WatchApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D293B9206981F80060E8AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F1D293BB206981F80060E8AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1D293BD206981F80060E8AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1D293C2206981F90060E8AD /* FitCount WatchApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FitCount WatchApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D293C7206981F90060E8AD /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F1D293C9206981F90060E8AD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		F1D293CB206981F90060E8AD /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		F1D293CD206981F90060E8AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1D293CF206981F90060E8AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8ACED0737CFAFEC9F933F8D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1B5C0342065765D00E388BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,6 +118,13 @@
 				F1B5C0512065766700E388BF /* MapKit.framework in Frameworks */,
 				F1B5C0542065766900E388BF /* HealthKit.framework in Frameworks */,
 				C707864304BD05314E64593F /* Pods_FitCountv2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1D293BF206981F90060E8AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				F1B5C0392065765D00E388BF /* FitCountv2 */,
+				F1D293B7206981F80060E8AD /* FitCount WatchApp */,
+				F1D293C6206981F90060E8AD /* FitCount WatchApp Extension */,
 				F1B5C0382065765D00E388BF /* Products */,
 				F1B5C04F2065766700E388BF /* Frameworks */,
 				3D44A9B6EA865663D74683E9 /* Pods */,
@@ -80,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				F1B5C0372065765D00E388BF /* FitCountv2.app */,
+				F1D293B6206981F80060E8AD /* FitCount WatchApp.app */,
+				F1D293C2206981F90060E8AD /* FitCount WatchApp Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,6 +191,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F1D293B7206981F80060E8AD /* FitCount WatchApp */ = {
+			isa = PBXGroup;
+			children = (
+				F1D293B8206981F80060E8AD /* Interface.storyboard */,
+				F1D293BB206981F80060E8AD /* Assets.xcassets */,
+				F1D293BD206981F80060E8AD /* Info.plist */,
+			);
+			path = "FitCount WatchApp";
+			sourceTree = "<group>";
+		};
+		F1D293C6206981F90060E8AD /* FitCount WatchApp Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F1D293C7206981F90060E8AD /* InterfaceController.swift */,
+				F1D293C9206981F90060E8AD /* ExtensionDelegate.swift */,
+				F1D293CB206981F90060E8AD /* ComplicationController.swift */,
+				F1D293CD206981F90060E8AD /* Assets.xcassets */,
+				F1D293CF206981F90060E8AD /* Info.plist */,
+			);
+			path = "FitCount WatchApp Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,15 +226,52 @@
 				F1B5C0352065765D00E388BF /* Resources */,
 				424E3B5CDBC43F454EBED17E /* [CP] Embed Pods Frameworks */,
 				5303BFDAD0DE6E5FB7C6EA0C /* [CP] Copy Pods Resources */,
+				F1D293DA206981FA0060E8AD /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F1D293D1206981FA0060E8AD /* PBXTargetDependency */,
 			);
 			name = FitCountv2;
 			productName = FitCountv2;
 			productReference = F1B5C0372065765D00E388BF /* FitCountv2.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F1D293B5206981F80060E8AD /* FitCount WatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1D293D9206981FA0060E8AD /* Build configuration list for PBXNativeTarget "FitCount WatchApp" */;
+			buildPhases = (
+				F1D293B4206981F80060E8AD /* Resources */,
+				F1D293D8206981FA0060E8AD /* Embed App Extensions */,
+				8ACED0737CFAFEC9F933F8D0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1D293C5206981F90060E8AD /* PBXTargetDependency */,
+			);
+			name = "FitCount WatchApp";
+			productName = "FitCount WatchApp";
+			productReference = F1D293B6206981F80060E8AD /* FitCount WatchApp.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F1D293C1206981F90060E8AD /* FitCount WatchApp Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1D293D7206981FA0060E8AD /* Build configuration list for PBXNativeTarget "FitCount WatchApp Extension" */;
+			buildPhases = (
+				F1D293BE206981F90060E8AD /* Sources */,
+				F1D293BF206981F90060E8AD /* Frameworks */,
+				F1D293C0206981F90060E8AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FitCount WatchApp Extension";
+			productName = "FitCount WatchApp Extension";
+			productReference = F1D293C2206981F90060E8AD /* FitCount WatchApp Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -150,6 +287,9 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
@@ -157,6 +297,14 @@
 								enabled = 1;
 							};
 						};
+					};
+					F1D293B5206981F80060E8AD = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F1D293C1206981F90060E8AD = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -174,6 +322,8 @@
 			projectRoot = "";
 			targets = (
 				F1B5C0362065765D00E388BF /* FitCountv2 */,
+				F1D293B5206981F80060E8AD /* FitCount WatchApp */,
+				F1D293C1206981F90060E8AD /* FitCount WatchApp Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -186,6 +336,23 @@
 				F1B5C0482065765D00E388BF /* LaunchScreen.storyboard in Resources */,
 				F1B5C0452065765D00E388BF /* Assets.xcassets in Resources */,
 				F1B5C0402065765D00E388BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1D293B4206981F80060E8AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1D293BC206981F80060E8AD /* Assets.xcassets in Resources */,
+				F1D293BA206981F80060E8AD /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1D293C0206981F90060E8AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1D293CE206981F90060E8AD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,11 +385,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FitCountv2/Pods-FitCountv2-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MMWormhole/MMWormhole.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMWormhole.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +431,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1D293BE206981F90060E8AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1D293CA206981F90060E8AD /* ExtensionDelegate.swift in Sources */,
+				F1D293C8206981F90060E8AD /* InterfaceController.swift in Sources */,
+				F1D293CC206981F90060E8AD /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1D293C5206981F90060E8AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1D293C1206981F90060E8AD /* FitCount WatchApp Extension */;
+			targetProxy = F1D293C4206981F90060E8AD /* PBXContainerItemProxy */;
+		};
+		F1D293D1206981FA0060E8AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1D293B5206981F80060E8AD /* FitCount WatchApp */;
+			targetProxy = F1D293D0206981FA0060E8AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F1B5C03E2065765D00E388BF /* Main.storyboard */ = {
@@ -279,6 +471,14 @@
 				F1B5C0472065765D00E388BF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F1D293B8206981F80060E8AD /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1D293B9206981F80060E8AD /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -425,6 +625,80 @@
 			};
 			name = Release;
 		};
+		F1D293D3206981FA0060E8AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4UB5L98LU;
+				IBSC_MODULE = FitCount_WatchApp_Extension;
+				INFOPLIST_FILE = "FitCount WatchApp/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BJCollins.FitCountv2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		F1D293D4206981FA0060E8AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4UB5L98LU;
+				IBSC_MODULE = FitCount_WatchApp_Extension;
+				INFOPLIST_FILE = "FitCount WatchApp/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BJCollins.FitCountv2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		F1D293D5206981FA0060E8AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4UB5L98LU;
+				INFOPLIST_FILE = "FitCount WatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BJCollins.FitCountv2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		F1D293D6206981FA0060E8AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4UB5L98LU;
+				INFOPLIST_FILE = "FitCount WatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BJCollins.FitCountv2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -442,6 +716,24 @@
 			buildConfigurations = (
 				F1B5C04D2065765D00E388BF /* Debug */,
 				F1B5C04E2065765D00E388BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1D293D7206981FA0060E8AD /* Build configuration list for PBXNativeTarget "FitCount WatchApp Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1D293D5206981FA0060E8AD /* Debug */,
+				F1D293D6206981FA0060E8AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1D293D9206981FA0060E8AD /* Build configuration list for PBXNativeTarget "FitCount WatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1D293D3206981FA0060E8AD /* Debug */,
+				F1D293D4206981FA0060E8AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
