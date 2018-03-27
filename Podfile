@@ -8,6 +8,5 @@ target 'FitCountv2' do
   # Pods for FitCountv2
     pod "Alamofire"
     pod "SwiftyJSON"
-    pod "MMWormhole"
 
 end

@@ -67,6 +67,8 @@ class WorkoutController: UIViewController, CLLocationManagerDelegate, WCSessionD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startWorkoutButton.layer.cornerRadius = 6
+        finishWorkoutButton.layer.cornerRadius = 6
         
         mapView.showsUserLocation = true
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)

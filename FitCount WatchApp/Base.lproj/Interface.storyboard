@@ -25,8 +25,8 @@
                         <separator alignment="left" id="B3f-j7-alR">
                             <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </separator>
-                        <label alignment="left" text="99999" id="8PV-re-MAP">
-                            <accessibilityTraits key="accessibilityTraits" staticText="YES" updatesFrequently="YES"/>
+                        <label alignment="left" text="0" id="8PV-re-MAP">
+                            <accessibilityTraits key="accessibilityTraits" updatesFrequently="YES"/>
                             <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="font" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
                         </label>

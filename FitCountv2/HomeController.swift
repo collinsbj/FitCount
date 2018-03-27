@@ -15,11 +15,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
     @IBOutlet weak var incorrectInfoLabel: UILabel!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     
     var userData: JSON = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        signInButton.layer.cornerRadius = 6
+          signUpButton.layer.cornerRadius = 6
         incorrectInfoLabel.isHidden = true
         userNameTextField.delegate = self
         passWordTextField.delegate = self

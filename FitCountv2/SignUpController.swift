@@ -20,10 +20,14 @@ class SignUpController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var retypePasswordTextField: UITextField!
     @IBOutlet weak var gymNameTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel.isHidden = true
+        signUpButton.layer.cornerRadius = 6
+        backButton.layer.cornerRadius = 6
         
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self

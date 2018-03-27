@@ -19,12 +19,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
         if WCSession.isSupported() {
@@ -35,12 +32,12 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        fitCountWatchLabel.setText(message["points"]! as? String)
+        print("message", message)
+        fitCountWatchLabel.setText(String(describing: message["points"]!))
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {

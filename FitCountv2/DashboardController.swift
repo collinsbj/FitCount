@@ -14,6 +14,7 @@ class DashboardController: UIViewController, NewFitCountData {
 
     @IBOutlet weak var fitCountLabel: UILabel!
     @IBOutlet weak var usersNameLabel: UILabel!
+    @IBOutlet weak var checkInButton: UIButton!
     
     var userData: JSON = []
     
@@ -21,6 +22,7 @@ class DashboardController: UIViewController, NewFitCountData {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkInButton.layer.cornerRadius = 6
         getUserData()
     }
 
