@@ -39,6 +39,7 @@ class WorkoutController: UIViewController, CLLocationManagerDelegate, WCSessionD
     @IBOutlet weak var startWorkoutButton: UIButton!
     @IBOutlet weak var finishWorkoutButton: UIButton!
     @IBOutlet weak var tooFarFromGymWarning: UILabel!
+    @IBOutlet weak var fitCountLogoImage: UIImageView!
     
     var session: WCSession!
     var delegate: NewFitCountData?
@@ -82,6 +83,7 @@ class WorkoutController: UIViewController, CLLocationManagerDelegate, WCSessionD
         fitCountNumberLabel.isHidden = true
         finishWorkoutButton.isHidden = true
         tooFarFromGymWarning.isHidden = true
+        fitCountLogoImage.isHidden = true
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
@@ -147,6 +149,7 @@ class WorkoutController: UIViewController, CLLocationManagerDelegate, WCSessionD
         if Int(distanceFromGym!) < 15 {
         mapView.isHidden = true
         startWorkoutButton.isHidden = true
+        fitCountLogoImage.isHidden = true
         currentFitCountLabel.isHidden = false
         fitCountNumberLabel.isHidden = false
         finishWorkoutButton.isHidden = false
