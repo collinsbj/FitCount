@@ -36,7 +36,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print("message", message)
         fitCountWatchLabel.setText(String(describing: message["points"]!))
     }
     
